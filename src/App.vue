@@ -1,39 +1,30 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-row>
-        <v-col>
-          <register></register>
-          <sign-in></sign-in>
-          <home></home>
-        </v-col>
-      </v-row>
-    </v-main>
-  </v-app>
+    <v-app>
+        <v-main>
+            <v-container>
+                <router-view></router-view>
+            </v-container>
+        </v-main>
+    </v-app>
 </template>
 
 <script>
-import Register from './views/Register.vue';
-import SignIn from './views/SignIn.vue';
-import Home from './views/Home.vue';
+    export default {
+        name: 'App',
 
-export default {
-  name: 'App',
-  components: {
-    //Register,
-    //SignIn,
-    Home
-  },
-
-  data: () => ({
-    //
-  }),
-}
+        data: () => ({
+            //
+        }),
+        mounted() {
+            //this.$auth.authLogin()
+            //localStorage.setItem("token", "")
+        }
+    }
 </script>
-<style scoped>
-  #app, main {
-    background-color: dimgray;
-    align-items: center;
-    font-weight: 300;
-  }
+<style>
+    #app, main {
+        background-color: dimgray;
+        font-weight: 300;
+        align-items: center;
+    }
 </style>
