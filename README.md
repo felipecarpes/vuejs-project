@@ -1,4 +1,4 @@
-# segundo-projeto-vue
+# First VueJS project of study
 
 ## Project setup
 ```
