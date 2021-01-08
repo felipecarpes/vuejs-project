@@ -1,30 +1,28 @@
 <template>
-    <v-app>
-        <v-main>
-            <v-container>
-                <router-view></router-view>
-            </v-container>
-        </v-main>
+    <v-app id="app">
+        <v-container bg fill-height grid-list-md text-xs-center fluid>
+            <v-layout row wrap align-center>
+                <v-flex>
+                    <router-view></router-view>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </v-app>
 </template>
 
 <script>
     export default {
-        name: 'App',
-
+        name: 'app',
         data: () => ({
             //
         }),
-        mounted() {
-            //this.$auth.authLogin()
-            //localStorage.setItem("token", "")
-        }
     }
 </script>
 <style>
-    #app, main {
+    #app {
         background-color: dimgray;
         font-weight: 300;
-        align-items: center;
+        width: 100%;
+        margin: 0px auto;
     }
 </style>

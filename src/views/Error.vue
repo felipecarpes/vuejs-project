@@ -7,10 +7,24 @@
                         Ops, algo aconteceu ao tentar acessar esta página, por gentileza volte e tente novamente!
                     </v-col>
                     <v-col class="shrink">
-                        <v-btn v-bind:href="'/'">Voltar</v-btn>
+                        <v-btn @click="back">Voltar</v-btn>
                     </v-col>
                 </v-row>
             </v-alert>
         </div>
     </v-main>
 </template>
+<script>
+    export default {
+        name: "Error",
+        data() {
+            //
+        },
+        methods: {
+            back() {
+                sessionStorage.removeItem("token")
+                window.location.href= "/"
+            }
+        }
+    }
+</script>

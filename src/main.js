@@ -11,8 +11,6 @@ Vue.use(VueToastify, {
     position: "top-right",
     theme: "light",
     iconEnabled: false,
-    //withBackdrop: true,
-    //backdrop: "rgba(252, 3, 57)"
 });
 
 new Vue({
