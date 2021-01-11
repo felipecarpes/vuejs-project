@@ -73,7 +73,7 @@
                             }
                         }
                     })
-                    xhr.open("POST", "https://we.imply.com/login");
+                    xhr.open("POST", "/");
                     xhr.send(data);
                 }
             },
