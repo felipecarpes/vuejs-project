@@ -56,25 +56,6 @@
         },
         methods: {
             async login() {
-                
-                //     var xhr = new XMLHttpRequest();
-                //     var data = JSON.stringify([this.dados.user, this.dados.senha]);
-
-                //     xhr.addEventListener("readystatechange", function () {
-                //         if (this.readyState === 4) {
-                //             if (this.responseText.result !== null || this.responseText.error !== undefined) {
-                //                 const token = JSON.parse(this.responseText)
-                //                 sessionStorage.setItem("token", token.result)
-                //                 return setInterval(() => window.location.href = "/home", 4000)
-                //             } else {
-                //                 window.location.href = "*"
-                //             }
-                //         }
-                //     })
-                //     xhr.open("POST", "https://we.imply.com/login");
-                //     xhr.send(data);
-                // }
-                
                 try {
                     if (this.dados.user === '' || this.dados.senha === '') {
                         return this.$vToastify.error("Usuario e senha devem ser preenchidos!", "Atencao!")
