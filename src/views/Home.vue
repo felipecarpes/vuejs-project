@@ -6,7 +6,7 @@
                 <v-col cols="1">
                     <v-card-text style="height: 100px; position: relative">
                         <v-fab-transition>
-                            <v-btn class="out-button" @click="logout" v-show="!hidden" color="white"  absolute top right>
+                            <v-btn class="out-button" @click="logout" color="white"  absolute top right>
                                 Sair
                                 <v-icon style="margin-left: 5px">mdi-logout</v-icon>
                             </v-btn>
@@ -60,6 +60,7 @@
 
 <script>
     import axios from 'axios';
+    import { logoutUser, isLoggedIn } from '../plugins/services/auth';
     export default {
         name: 'Home',
         data() {
@@ -82,14 +83,14 @@
                     .catch(error => console.log(error))
             },
             logout() {
-                sessionStorage.removeItem("token");
-                window.location.href = "/"
+                logoutUser()
             }
         },
         mounted() {
-            this.$auth.authLogin()
+            isLoggedIn()
             this.loading()
-        }
+        },
+        watch: isLoggedIn()
     }
 </script>
 <style scoped>
